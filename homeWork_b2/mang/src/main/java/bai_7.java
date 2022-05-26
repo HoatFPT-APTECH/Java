@@ -35,10 +35,12 @@ public class bai_7 {
         }
         //start
         System.out.println("mang truoc khi dao lon : "+Arrays.toString(arr));
-         int [] arr2= new int [n];
-        for(int j=0;j<n;j++){
-           arr2[j]=arr[n-j];
+         
+        for(int j=0;j<n/2;j++){
+          int temp=arr[j];
+          arr[j]=arr[n-j-1];
+          arr[n-j-1]=temp;
         }
-        System.out.println("mang sau khi dao lon :"+Arrays.toString(arr2));
+        System.out.println("mang sau khi dao lon :"+Arrays.toString(arr));
     }
 }
