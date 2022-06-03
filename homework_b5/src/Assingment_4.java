@@ -21,6 +21,12 @@ public class Assingment_4 {
 	Cat c = new Cat("Tom");
 	z.add(a);z.add(d);z.add(c);
 	z.sayHello();
-
+/* khái niệm đa hinh
+        list.add(new Animal("A");
+        list.add(new Dog("B");
+        for(int i=0 ;i<list.size();i++){
+        list.get(i).sayHello();  // khái niệm đa hình nằm ở hỗ này! 
+        }
+        */
     }
 }
