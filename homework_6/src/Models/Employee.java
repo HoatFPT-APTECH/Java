@@ -14,7 +14,7 @@ public abstract class Employee {
   
     String name;
     double salary;
-   double totalPay=0;
+    public double totalPay;
    
     public Employee() {
     }
@@ -26,4 +26,5 @@ public abstract class Employee {
     
     public abstract double calculatepay();
     public abstract void display();
+    public abstract void Nhap();
 }

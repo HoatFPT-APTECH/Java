@@ -30,15 +30,18 @@ public class Laborer extends Employee {
 
     }
 
-    ;
-    public void display() {
-     Scanner sc = new Scanner(System.in);
+      public void Nhap(){
+              Scanner sc = new Scanner(System.in);
         System.out.println("Nhập tên của Nhân viên phòng thí nghiệm: ");
         name = sc.nextLine();
         System.out.println("Nhập lương cơ bản của Nhân viên phòn thí nghiệm: ");
         salary = sc.nextDouble();
         System.out.println("nhập vào số giờ làm việc của Nhân viên phòng thí nghiệm : ");
-        hrsworked = sc.nextInt();
+        hrsworked = sc.nextInt(); 
+      };
+      
+    public void display() {
+
         System.out.println("Lương của nhân viên thí nghiệm " + name + " là" + calculatepay());
     }
 ;

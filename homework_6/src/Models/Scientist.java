@@ -29,15 +29,19 @@ public class Scientist extends Employee {
         return totalPay;
     }
 
-    ;
-    public void display() {
- Scanner sc = new Scanner(System.in);
-        System.out.println("Nhập tên của nhà khoa học: ");
+      public  void Nhap(){
+           Scanner sc = new Scanner(System.in);
+            System.out.println("Nhập tên của nhà khoa học: ");
         name = sc.nextLine();
         System.out.println("Nhập số bài viết của khoa học trong một tháng: ");
         publication = sc.nextInt();
         System.out.println("Nhập lương cơ bản của nhà Khoa học: ");
         salary = sc.nextInt();
+      }
+              
+    public void display() {
+
+       
         System.out.println("Lương của nhà khoa học " + name + " là: " + calculatepay());
     }
 ;

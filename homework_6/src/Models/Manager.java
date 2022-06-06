@@ -30,11 +30,8 @@ public class Manager extends Employee {
 
     }
 
-    ;
-    public void display() {
-
-       
-        Scanner sc = new Scanner(System.in);
+      public  void Nhap(){
+                  Scanner sc = new Scanner(System.in);
         
         System.out.println("Nhập Tên của Quản Lý :");
         name = sc.nextLine();
@@ -42,6 +39,11 @@ public class Manager extends Employee {
         salary = sc.nextDouble();
         System.out.println("Nhập Doanh thu của Quản Lý: ");
         business_amount = sc.nextInt();
+      };
+    public void display() {
+
+       
+
          System.out.println("Lương của Quản Lý " + name + " là : " + calculatepay());
     }
 ;
