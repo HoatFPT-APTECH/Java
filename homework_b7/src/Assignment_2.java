@@ -70,30 +70,32 @@ public class Assignment_2 {
         System.out.println("********************************************");
         return chon;
     }
-   public static void SapXep() {
+   public  void SapXep() {
         Assignment_2 b2 = new Assignment_2();
-        for (int i = 0; i < b2.list.size() - 1; i++) {
-            for (int j = i + 1; j < b2.list.size(); j++) {
-                Vehicles temp;
-                if (b2.list.get(i).price > b2.list.get(j).price) {
-                    temp = b2.list.get(i);
-                    b2.list.set(i, b2.list.get(j));
-                    b2.list.set(j, temp);
+         Vehicles temp;
+        for (int i = 0; i <list.size() - 1; i++) {
+           
+            for (int j = i+1; j < list.size(); j++) {
+                
+                if ( list.get(i).price >list.get(j).price) {
+                    temp = list.get(i);
+                   list.set(i, list.get(j));
+                    list.set(j, temp);
                 }
 
             }
         }
    }     
-   public int SearchByModel(String search){
-        Assignment_2 b2 = new Assignment_2();
-       
-       
-        for(int i=0;i<b2.list.size();i++){
-            if(b2.list.get(i).model.equalsIgnoreCase(search))
-          return i;
+   private int searchByModel(String n)
+    {
+        for(int i=0;i<list.size(); i++){
+            if(list.get(i).model.equalsIgnoreCase(n))
+            {
+               return i;//trả về vị trí tìm được và kết thúc
+            }
         }
-      return -1;
-   }
+        return -1;//nếu trong vòng lặp không có tên cần tìm
+    }
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -141,26 +143,26 @@ public class Assignment_2 {
                     bm=backToMenu();
                     break;
                 case 3:
-                    System.out.println("Danh Sách nhân viên với lương trước khi sắp xếp: ");
+                    System.out.println("Danh Sách sản phẩm trước  khi sắp xếp: ");
                      for(int i=0;i<b2.list.size();i++){
                b2.list.get(i).display();
                     }
-                    SapXep();
-                    System.out.println("Danh sách nhân viên với lương sau khi sắp xếp: ");
+                    b2.SapXep();
+                    System.out.println("Danh sách sản phẩm  sau khi sắp xếp: ");
                      for(int i=0;i<b2.list.size();i++){
                b2.list.get(i).display();
                     }
                      bm=backToMenu();
                      break;
                 case 4 :
-                    String search;
+                    String s;
                     System.out.println("Xin mời nhập vào mẫu model ô tô hoặc ô tô tải cần tìm: ");
-                    search=sc.nextLine();
-                  int i=b2.SearchByModel(search);
+                    s=sc.nextLine();
+                  int i=b2.searchByModel(s);
                     
                    if(i>-1){
                        System.out.println("Đã tìm thấy. Thông tin đối tượng: ");
-                       System.out.println(b2.list.get(i));
+                       b2.list.get(i).display();
                    }
                    else System.out.println("Đéo tìm thấy");
                     bm=backToMenu();

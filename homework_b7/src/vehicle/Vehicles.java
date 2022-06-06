@@ -5,6 +5,8 @@
  */
 package vehicle;
 
+import java.util.Scanner;
+
 /**
  *
  * @author hoatd
@@ -49,8 +51,8 @@ public abstract class Vehicles implements IVehicle {
     public void setPrice(double price) {
         this.price = price;
     }
-    @Override
-      public abstract void input();
-    @Override
-    public abstract void display();
+     @Override
+  public abstract void input();
+     @Override
+  public abstract void display();
 }
