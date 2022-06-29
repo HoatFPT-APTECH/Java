@@ -21,7 +21,7 @@ public class Database {
     public static String url="jdbc:mysql://localhost:3306/t2111e";
 
     
-    public static Connection ketnoiMySql(){
+    public static Connection KetnoiCSDL(){
         Connection cnn=null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
