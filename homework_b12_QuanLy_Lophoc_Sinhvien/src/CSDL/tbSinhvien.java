@@ -18,7 +18,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Tran Manh Truong
+ * @author hoatd
  */
 public class tbSinhvien {
     public static int LayDSSinhvien(Vector<clsSinhvien> ds)
@@ -57,7 +57,7 @@ public class tbSinhvien {
         String sql = "INSERT INTO tbSinhvien VALUES(NULL,?,?,?,?,?)";
         try {
             PreparedStatement stm = cnn.prepareStatement(sql);
-            stm.setString(1, sv.masv);
+            stm.setString(1, sv.masv);// có id đấy nhưng bố mày đéo thèm chèn thì làm gì nhau nào.
             stm.setString(2, sv.hoten);
             stm.setBoolean(3, sv.gioitinh);
             stm.setString(4, sv.diachi);

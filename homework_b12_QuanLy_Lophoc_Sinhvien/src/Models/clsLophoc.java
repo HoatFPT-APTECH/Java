@@ -7,40 +7,34 @@ package Models;
 
 /**
  *
- * @author Tran Manh Truong
+ * @author hoatd
  */
 public class clsLophoc {
     int Malop;
-    String Tenlop;
-    public clsLophoc()
-    {
-        Malop =0;
-        Tenlop="";
+    String tenLop;
+
+    public clsLophoc() {
     }
-    public clsLophoc(int malop, String tenlop)
-    {
-        Malop =malop;
-        Tenlop=tenlop;
+
+    public clsLophoc(int Malop, String tenLop) {
+        this.Malop = Malop;
+        this.tenLop = tenLop;
     }
-    public int getMalop()
-    {
+
+    public int getMalop() {
         return Malop;
-        
     }
-    public void setMalop(int malop)
-    {
-        Malop = malop;
+
+    public String getTenLop() {
+        return tenLop;
     }
-    public String getTenlop()
-    {
-        return Tenlop;
+
+    public void setMalop(int Malop) {
+        this.Malop = Malop;
     }
-    public void setTenlop(String tenlop)
-    {
-        Tenlop = tenlop;
+
+    public void setTenLop(String tenLop) {
+        this.tenLop = tenLop;
     }
-    @Override
-    public String toString() {
-        return Tenlop ;
-    }  
+    
 }

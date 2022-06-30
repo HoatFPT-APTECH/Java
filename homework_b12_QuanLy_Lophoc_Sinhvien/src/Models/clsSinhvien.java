@@ -16,6 +16,7 @@ public class clsSinhvien {
     public String diachi;
     public int malop;
     public String tenlop;
+    
     public clsSinhvien()
     {
     }
