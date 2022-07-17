@@ -16,13 +16,12 @@ public class clsSinhvien {
     public String diachi;
     public int malop;
     public String tenlop;
-    
+    public String hinhanh;
     public clsSinhvien()
     {
     }
-    public clsSinhvien(int id, String masv, String hoten,
-           boolean gioitinh, String diachi, int malop,String tenlop)
-    {
+
+    public clsSinhvien(int id, String masv, String hoten, boolean gioitinh, String diachi, int malop, String tenlop, String hinhanh) {
         this.id = id;
         this.masv = masv;
         this.hoten = hoten;
@@ -30,7 +29,17 @@ public class clsSinhvien {
         this.diachi = diachi;
         this.malop = malop;
         this.tenlop = tenlop;
+        this.hinhanh = hinhanh;
     }
+
+    public String getHinhanh() {
+        return hinhanh;
+    }
+
+    public void setHinhanh(String hinhanh) {
+        this.hinhanh = hinhanh;
+    }
+   
     public int getId() {
         return id;
     }

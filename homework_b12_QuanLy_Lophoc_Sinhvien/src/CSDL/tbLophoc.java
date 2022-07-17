@@ -6,6 +6,7 @@
 package CSDL;
 
 import Models.clsLophoc;
+import Models.clsSinhvien;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -13,12 +14,38 @@ import java.sql.SQLException;
 import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
- * @author hoatd
  */
 public class tbLophoc {
+    public Vector<clsLophoc> LayDSSV(Vector<clsLophoc> list){
+        Connection cnn= CSDL.Database.KetnoiCSDL();
+        
+        if(cnn!= null){
+        String sql="SELECT * FROM tbLophoc";
+            try {
+                PreparedStatement ps= cnn.prepareStatement(sql);
+                ResultSet rs= ps.executeQuery();
+                while(rs.next()){
+                    int malop=rs.getInt("malop");
+                    String tenlop=rs.getString("tenlop");
+                    clsLophoc lophoc= new clsLophoc(malop,tenlop);
+                    list.add(lophoc);
+                    
+                }
+                
+            } catch (SQLException ex) {
+                Logger.getLogger(tbLophoc.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        
+        
+        }
+        
+        return list;
+    }
+    
     public static int hienThiDSLop(Vector<clsLophoc> danhsach){
         Connection cnn=CSDL.Database.KetnoiCSDL();
         if(cnn==null)return -1;

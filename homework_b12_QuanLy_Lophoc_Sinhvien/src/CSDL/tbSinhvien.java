@@ -54,7 +54,7 @@ public class tbSinhvien {
         Connection cnn = Database.KetnoiCSDL();
         if(cnn==null)
             return -1;
-        String sql = "INSERT INTO tbSinhvien VALUES(NULL,?,?,?,?,?)";
+        String sql = "INSERT INTO tbSinhvien VALUES(NULL,?,?,?,?,?,?)";
         try {
             PreparedStatement stm = cnn.prepareStatement(sql);
             stm.setString(1, sv.masv);// có id đấy nhưng bố mày đéo thèm chèn thì làm gì nhau nào.
@@ -62,6 +62,7 @@ public class tbSinhvien {
             stm.setBoolean(3, sv.gioitinh);
             stm.setString(4, sv.diachi);
             stm.setInt(5, sv.malop);
+            stm.setString(6,sv.hinhanh);
             int n = stm.executeUpdate();
             return n;
         } catch (SQLException ex) {
