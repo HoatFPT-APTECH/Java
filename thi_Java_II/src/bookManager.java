@@ -121,10 +121,10 @@ public class bookManager {
      
         int n= this.list.size();
         for(clsBook e: list){
-            System.out.printf("%9s"+e.BookID);
-            System.out.printf("%25s"+e.BookTitle);
-            System.out.println("%15s"+e.Author);
-            System.out.printf("%10d"+e.Price);
+            System.out.printf(e.BookID+"    ");
+            System.out.printf(e.BookTitle+"     " );
+            System.out.printf(e.Author+"    ");
+            System.out.printf(String.valueOf(e.Price));
             
                     
         }
