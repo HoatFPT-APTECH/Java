@@ -37,7 +37,7 @@ public class MainProgram {
             case 1:
                 System.out.println("Chức năng 1: ");
                 m.add();
-                System.out.println(m.list);
+         
                 break;
             case 2: 
                 System.out.println("Chức năng 2: ");
