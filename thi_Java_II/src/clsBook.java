@@ -1,3 +1,6 @@
+
+import java.io.Serializable;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -8,9 +11,9 @@
  *
  * @author hoatd
  */
-public class clsBook {
-   public String BookID,BookTitle,Author;
- public  int Price;
+public class clsBook implements Serializable {
+    String BookID,BookTitle,Author;
+   int Price;
 
     public clsBook() {
     }
@@ -53,5 +56,6 @@ public class clsBook {
     public void setPrice(int Price) {
         this.Price = Price;
     }
+
    
 }
