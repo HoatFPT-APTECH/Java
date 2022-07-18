@@ -36,7 +36,9 @@ public class MainProgram {
         switch(chon){
             case 1:
                 System.out.println("Chức năng 1: ");
-                m.add();break;
+                m.add();
+         
+                break;
             case 2: 
                 System.out.println("Chức năng 2: ");
                 m.save();

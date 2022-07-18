@@ -35,12 +35,13 @@ public class bookManager {
              fis= new FileInputStream("books.dat");
           ois= new ObjectInputStream(fis);
             int n=ois.readInt();
-            clsBook b;
+            
             for(int i=0;i<n;i++){
-                b= (clsBook)ois.readObject();
+                
+               clsBook b= (clsBook)ois.readObject();
                 this.list.add(b);
             }
-           
+            System.out.println("Tải dữ liệu thành công");
         }catch(EOFException ex){
             System.out.println("Kết thúc tệp.");
         }
@@ -117,15 +118,13 @@ public class bookManager {
     public void display(){
         this.list.clear();
         load();
-        System.out.println(" System.out.println(\"Display all students\");\n" +
-"        System.out.println(\"  BookID            Book Name                      Author              Price\");\n" +
-"        System.out.println(\"------------    ---------------------------       ------------         --------\");");
+     
         int n= this.list.size();
         for(clsBook e: list){
-            System.out.printf("%9s"+e.BookID);
-            System.out.printf("%25s"+e.BookTitle);
-            System.out.println("%15s"+e.Author);
-            System.out.printf("%10d"+e.Price);
+            System.out.printf(e.BookID+"    ");
+            System.out.printf(e.BookTitle+"     " );
+            System.out.printf(e.Author+"    ");
+            System.out.printf(String.valueOf(e.Price));
             
                     
         }
