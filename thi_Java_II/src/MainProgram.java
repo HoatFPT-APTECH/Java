@@ -19,11 +19,11 @@ public class MainProgram {
     public int Menu(){
         Scanner sc= new Scanner(System.in);
         int choose;
-        System.out.println("menu: \n" +
+        System.out.println("\n Menu: \n" +
 "o 1. Add book records \n" +
 "o 2. Save \n" +
 "o 3. Display book records \n" +
-"o 4. Exit ");
+"o 4. Exit \n Mời nhập lựa chọn:  ");
         choose= sc.nextInt();
         return choose;
     }

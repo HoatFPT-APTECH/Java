@@ -120,12 +120,14 @@ public class bookManager {
         load();
      
         int n= this.list.size();
+          System.out.println("Display all students");
+        System.out.println("  BookID            BookName               Author             Price" );
+        System.out.println("------------    --------------------    -------------       ----------");
         for(clsBook e: list){
-            System.out.printf(e.BookID+"    ");
-            System.out.printf(e.BookTitle+"     " );
-            System.out.printf(e.Author+"    ");
-            System.out.printf(String.valueOf(e.Price));
-            
+       System.out.printf("%s    ", e.BookID);
+            System.out.printf("%18s    ", e.BookTitle);
+            System.out.printf("%19s", e.Author);
+            System.out.printf("%15d",e.Price);
                     
         }
     }
